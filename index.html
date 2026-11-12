@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores da Guiné - Cozinha guineense</title>
+    <meta name="description" content="Restaurante de cozinha guineense. Veja a ementa, o prato do dia e o horário.">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/menu.js" defer></script>
+</head>
+<body>
+
+    <!-- Cabeçalho (igual em todas as páginas; só muda o aria-current) -->
+    <header class="cabecalho">
+        <div class="contentor cabecalho__interior">
+            <a href="index.html" class="logo">
+                <img src="imagens/logo.jpg" alt="Logo do restaurante" class="logo__imagem">
+                <span>Sabores da Guiné</span>
+            </a>
+
+            <!-- Botão do menu: só aparece em ecrãs pequenos; o comportamento está em js/menu.js -->
+            <button type="button" id="menu-botao" class="menu-botao" aria-expanded="false" aria-controls="menu-principal">
+                <span id="menu-icone" aria-hidden="true">☰</span> Menu
+            </button>
+
+            <nav id="menu-principal" class="menu" aria-label="Principal">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Início</a></li>
+                    <li><a href="ementa.html">Ementa</a></li>
+                    <li><a href="contatos.html">Contatos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Seção principal com o conteúdo da página -->
+        <section class="contentor hero">
+            <div class="hero__texto">
+                <h1>Cheira a Guiné. Entre e sente-se.</h1>
+                <p>Cheiro de caldo ao lume, frango a chiar na grelha e uma sala onde se come devagar e se fica mais um bocadinho.</p>
+                <a href="ementa.html" class="botao">Ver ementa</a>
+            </div>
+            <img src="imagens/caldo-de-mancarra.webp" alt="Caldo de mancarra">
+        </section>
+
+        <!-- Seção com a ementa -->
+        <section class="contentor seccao" aria-labelledby="t-destaques">
+            <div class="seccao__cabecalho">
+                <h2 id="t-destaques">Destaques da ementa</h2>
+                <a href="ementa.html">Ver ementa completa</a>
+            </div>
+
+            <!-- Lista de pratos em destaque -->
+            <div class="grelha-pratos">
+                <article class="cartao">
+                    <img src="imagens/cafriela-de-frango.webp" alt="Cafriela de Frango">
+                    <div class="cartao__corpo">
+                        <p class="etiqueta">Prato principal</p>
+                        <h3>Cafriela</h3>
+                        <p>Frango grelhado com limão, alho, cebola, especiarias e piri-piri. Chega com arroz e batata frita.</p>
+                        <div class="cartao__rodape">
+                            <span class="preco">12,50 €</span>
+                            <a href="ementa.html" class="botao botao--pequeno">Ver na ementa</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="cartao">
+                    <img src="imagens/caldo-chabeu.webp" alt="Caldo de Chabéu">
+                    <div class="cartao__corpo">
+                        <p class="etiqueta">Prato principal</p>
+                        <h3>Chabéu de galinha</h3>
+                        <p>Galinha estufada em óleo de palma, com cebola e tomate. Come-se com arroz branco.</p>
+                        <div class="cartao__rodape">
+                            <span class="preco">13,00 €</span>
+                            <a href="ementa.html" class="botao botao--pequeno">Ver na ementa</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cartao">
+                    <img src="imagens/sopa-legumes.jpeg" alt="Sopa de legumes">
+                    <div class="cartao__corpo">
+                        <p class="etiqueta">Entrada</p>
+                        <h3>Sopa de legumes</h3>
+                        <p>Legumes da época cozidos devagar, com um fio de óleo e um toque de piri-piri. Quentinha e leve, para começar bem.</p>
+                        <div class="cartao__rodape">
+                            <span class="preco">6,50 €</span>
+                            <a href="ementa.html" class="botao botao--pequeno">Ver na ementa</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Seção com o prato do dia e horário -->
+        <section class="contentor seccao duas-colunas">
+            <div class="painel">
+                <p class="etiqueta">Prato do dia</p>
+                <h2>Caldo de mancarra</h2>
+                <p>Amendoim moído devagar, com carne e um fio de piri-piri. É o prato que mais saudades mata.</p>
+                <p class="preco">11,50 €</p>
+            </div>
+
+            <div class="painel">
+                <p class="etiqueta">Horário</p>
+                <dl class="horario">
+                    <div><dt>Almoço</dt><dd>12:00 – 15:00</dd></div>
+                    <div><dt>Jantar</dt><dd>19:00 – 23:00</dd></div>
+                    <div><dt>Encerrado</dt><dd>Segundas-feiras</dd></div>
+                </dl>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé (igual em todas as páginas) -->
+    <footer class="rodape">
+        <div class="contentor rodape__interior">
+            <div>
+                <p class="rodape__titulo">Sabores da Guiné</p>
+                <p>Cozinha guineense.</p>
+            </div>
+            <div>
+                <p class="rodape__titulo">Contactos</p>
+                <address>
+                    Rua República, n.º 100<br>
+                    3045-116 Coimbra<br>
+                    +351 930 633 000<br>
+                    frakitojr08@gmail.com
+                </address>
+            </div>
+            <div>
+                <p class="rodape__titulo">Redes sociais</p>
+                <p><a href="https://www.instagram.com/sabores.245?exln=MTloM2hldDN6dGhxZQ%3D%3D&utm_source=qr" target="_blank" rel="noopener">Instagram</a></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

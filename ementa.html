@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ementa - Sabores da Guiné</title>
+    <meta name="description" content="A ementa do Sabores da Guiné: entradas, pratos principais, sobremesas e bebidas.">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/menu.js" defer></script>
+    <script src="js/ementa.js" defer></script>
+</head>
+<body>
+
+    <!-- Cabeçalho (igual em todas as páginas; só muda o aria-current) -->
+    <header class="cabecalho">
+        <div class="contentor cabecalho__interior">
+            <a href="index.html" class="logo">
+                <img src="imagens/logo.jpg" alt="Logo do restaurante" class="logo__imagem">
+                    <span>Sabores da Guiné</span>
+            </a>
+
+            <!-- Botão do menu: só aparece em ecrãs pequenos; o comportamento está em js/menu.js -->
+            <button type="button" id="menu-botao" class="menu-botao" aria-expanded="false" aria-controls="menu-principal">
+                <span id="menu-icone" aria-hidden="true">☰</span> Menu
+            </button>
+
+            <nav id="menu-principal" class="menu" aria-label="Principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="ementa.html" aria-current="page">Ementa</a></li>
+                    <li><a href="contatos.html">Contatos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contentor seccao">
+
+        <h1>Ementa</h1>
+        <p class="intro">Pratos tradicionais da cozinha guineense, feitos com calma.</p>
+
+        <div class="ementa-layout">
+
+            <!-- Pesquisa e categorias. O comportamento está em js/ementa.js -->
+            <aside class="filtros painel" aria-label="Pesquisar e filtrar">
+                <label for="pesquisa" class="filtros__titulo">Pesquisar prato</label>
+                <input type="search" id="pesquisa" placeholder="ex.: frango, amendoim…">
+
+                <p class="filtros__titulo">Categorias</p>
+                <div class="filtros__categorias">
+                    <button type="button" class="chip" data-filtro="todos" aria-pressed="true">Todos</button>
+                    <button type="button" class="chip" data-filtro="entradas" aria-pressed="false">Entradas</button>
+                    <button type="button" class="chip" data-filtro="pratos" aria-pressed="false">Pratos principais</button>
+                    <button type="button" class="chip" data-filtro="sobremesas" aria-pressed="false">Sobremesas</button>
+                    <button type="button" class="chip" data-filtro="bebidas" aria-pressed="false">Bebidas</button>
+                </div>
+            </aside>
+
+            <!-- Lista de pratos -->
+            <section aria-labelledby="t-lista">
+                <h2 id="t-lista" class="sr-only">Lista de pratos</h2>
+                <p id="contador" class="contador" aria-live="polite">9 pratos</p>
+
+                <div class="grelha-pratos">
+
+                    <article class="cartao prato" data-categoria="entradas">
+                        <img src="imagens/sopa-legumes.jpeg" alt="Sopa de legumes">
+                        <div class="cartao__corpo">
+                            <p class="etiqueta">Entradas</p>
+                            <h3>Sopa de legumes</h3>
+                            <p>Legumes da época cozidos devagar, com um fio de óleo e um toque de piri-piri. Quentinha e leve, para começar bem.</p>
+                            <p class="ingredientes"><strong>Leva:</strong> batata, cenoura, abóbora, cebola, piri-piri</p>
+                            <div class="cartao__rodape"><span class="preco">6,50 €</span></div>
+                        </div>
+                    </article>
+
+                    <article class="cartao prato" data-categoria="entradas">
+                        <img src="imagens/pasteis-peixe.jpeg" alt="Pastéis de peixe">
+                        <div class="cartao__corpo">
+                            <p class="etiqueta">Entradas</p>
+                            <h3>Pastéis de peixe</h3>
+                            <p>Pastéis estaladiços, com molho à parte.</p>
+                            <p class="ingredientes"><strong>Leva:</strong> peixe, batata, salsa, piri-piri</p>
+                            <div class="cartao__rodape"><span class="preco">5,00 €</span></div>
+                        </div>
+                    </article>
+
+                    <article class="cartao prato" data-categoria="pratos">
+                        <img src="imagens/cafriela-de-frango.webp" alt="Cafriela de frango">
+                        <div class="cartao__corpo">
+                            <p class="etiqueta">Pratos principais</p>
+                            <h3>Cafriela</h3>
+                            <p>Frango grelhado com limão, alho, cebola, especiarias e piri-piri. Chega com arroz e batata frita.</p>
+                            <p class="ingredientes"><strong>Leva:</strong> frango, limão, alho, cebola, piri-piri, arroz</p>
+                            <div class="cartao__rodape"><span class="preco">12,50 €</span></div>
+                        </div>
+                    </article>
+
+                    <article class="cartao prato" data-categoria="pratos">
+                        <img src="imagens/caldo-chabeu.webp" alt="Caldo de chabéu">
+                        <div class="cartao__corpo">
+                            <p class="etiqueta">Pratos principais</p>
+                            <h3>Chabéu de galinha</h3>
+                            <p>Galinha estufada em óleo de palma, com cebola e tomate. Come-se com arroz branco.</p>
+                            <p class="ingredientes"><strong>Leva:</strong> galinha, óleo de palma, cebola, tomate, arroz</p>
+                            <div class="cartao__rodape"><span class="preco">13,00 €</span></div>
+                        </div>
+                    </article>
+
+                    <article class="cartao prato" data-categoria="pratos">
+                        <img src="imagens/caldo-de-mancarra.webp" alt="Caldo de mancarra">
+                        <div class="cartao__corpo">
+                            <p class="etiqueta">Pratos principais</p>
+                            <h3>Caldo de mancarra</h3>
+                            <p><br>Amendoim moído devagar, com carne e um fio de piri-piri.</br></p>
+                            <h4>É o prato do dia desta semana.</h4>
+                            <p class="ingredientes"><strong>Leva:</strong> amendoim, carne, cebola, piri-piri, arroz</p>
+                            <div class="cartao__rodape"><span class="preco">11,50 €</span></div>
+                        </div>
+                    </article>
+
+                    <article class="cartao prato" data-categoria="sobremesas">
+                        <img src="imagens/doce-caju.jpeg" alt="Doce de caju">
+                        <div class="cartao__corpo">
+                            <p class="etiqueta">Sobremesas</p>
+                            <h3>Doce de caju</h3>
+                            <p>Caju cozido com açúcar até ficar macio e brilhante. Serve-se frio.</p>
+                            <p class="ingredientes"><strong>Leva:</strong> caju, açúcar</p>
+                            <div class="cartao__rodape"><span class="preco">4,00 €</span></div>
+                        </div>
+                    </article>
+
+                    <article class="cartao prato" data-categoria="sobremesas">
+                        <img src="imagens/bolo-coco.jpeg" alt="Bolo de coco">
+                        <div class="cartao__corpo">
+                            <p class="etiqueta">Sobremesas</p>
+                            <h3>Bolo de coco</h3>
+                            <p>Fatia generosa, húmida, com coco ralado por cima.</p>
+                            <p class="ingredientes"><strong>Leva:</strong> coco, ovos, farinha, açúcar</p>
+                            <div class="cartao__rodape"><span class="preco">4,00 €</span></div>
+                        </div>
+                    </article>
+
+                    <article class="cartao prato" data-categoria="bebidas">
+                        <img src="imagens/sumo-gengibre.jpeg" alt="Sumo de gengibre">
+                        <div class="cartao__corpo">
+                            <p class="etiqueta">Bebidas</p>
+                            <h3>Sumo de gengibre</h3>
+                            <p>Feito na casa, com gengibre fresco e limão. Pica um bocadinho.</p>
+                            <p class="ingredientes"><strong>Leva:</strong> gengibre, limão, açúcar</p>
+                            <div class="cartao__rodape"><span class="preco">3,00 €</span></div>
+                        </div>
+                    </article>
+
+                    <article class="cartao prato" data-categoria="bebidas">
+                        <img src="imagens/sumo-caju.jpeg" alt="Sumo de caju">
+                        <div class="cartao__corpo">
+                            <p class="etiqueta">Bebidas</p>
+                            <h3>Sumo de caju</h3>
+                            <p>Doce e fresco, servido bem frio.</p>
+                            <p class="ingredientes"><strong>Leva:</strong> caju, água, açúcar</p>
+                            <div class="cartao__rodape"><span class="preco">3,00 €</span></div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Aparece só quando não há resultados -->
+                <p id="sem-resultados" class="aviso" hidden>
+                    Não encontrámos nenhum prato com essa pesquisa. Experimente outra palavra ou escolha “Todos”.
+                </p>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- Rodapé (igual em todas as páginas) -->
+    <footer class="rodape">
+        <div class="contentor rodape__interior">
+            <div>
+                <p class="rodape__titulo">Sabores da Guiné</p>
+                <p>Cozinha guineense.</p>
+            </div>
+            <div>
+                <p class="rodape__titulo">Contatos</p>
+                <address>
+                    Rua República, n.º 100<br>
+                    3045-116 Coimbra<br>
+                    +351 930 633 000<br>
+                    frakitojr08@gmail.com
+                </address>
+            </div>
+            <div>
+                <p class="rodape__titulo">Redes sociais</p>
+                <p><a href="https://www.instagram.com/sabores.245?exln=MTloM2hldDN6dGhxZQ%3D%3D&utm_source=qr" target="_blank" rel="noopener">Instagram</a></p>
+            </div>
+        </div>
+    </footer>
+   
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos - Sabores da Guiné</title>
+    <meta name="description" content="Conheça a casa, o horário e a morada do Sabores da Guiné.">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/menu.js" defer></script>
+</head>
+<body>
+
+    <!-- Cabeçalho (igual em todas as páginas; só muda o aria-current) -->
+    <header class="cabecalho">
+        <div class="contentor cabecalho__interior">
+            <a href="index.html" class="logo">
+                <img src="imagens/logo.jpg" alt="Logo do restaurante" class="logo__imagem">
+                <span>Sabores da Guiné</span>
+            </a>
+
+            <!-- Botão do menu: só aparece em ecrãs pequenos; o comportamento está em js/menu.js -->
+            <button type="button" id="menu-botao" class="menu-botao" aria-expanded="false" aria-controls="menu-principal">
+                <span id="menu-icone" aria-hidden="true">☰</span> Menu
+            </button>
+
+            <nav id="menu-principal" class="menu" aria-label="Principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="ementa.html">Ementa</a></li>
+                    <li><a href="contatos.html" aria-current="page">Contatos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contentor seccao">
+        
+        <h1>Venha ter connosco!</h1>
+
+        <section class="duas-colunas" aria-labelledby="t-casa">
+            <div>
+                <h2 id="t-casa">A Nossa Casa</h2>
+                <br>Abrimos para quem tem saudades da Guiné e para quem quer descobri-la. As receitas vêm das cozinhas das nossas famílias e fazem-se como sempre se fizeram: devagar.</br>
+                <p>Venha com fome e com tempo. Nós tratamos do resto.</p>
+                <p><strong>Na cozinha:</strong> Carlita Da Silva. <strong>Na sala:</strong> Domingos júnior.</p>
+            </div>
+            <div class="foto">
+                <img src="imagens/sala.jpg" alt="Sala do restaurante">
+            </div>
+        </section>
+
+        <!-- Morada, horário e mapa -->
+        <section class="seccao duas-colunas" aria-labelledby="t-onde">
+            <div class="painel">
+                <h2 id="t-onde">Onde estamos</h2>
+                <address class="info-lista">
+                    <p><strong>Morada</strong><br>Rua República, n.º 100<br>3045-116 Coimbra</p>
+                    <p><strong>Telefone</strong><br>+351 930 633 000</p>
+                    <p><strong>E-mail</strong><br>frakitojr08@gmail.com</p>
+                </address>
+
+                <h3>Horário</h3>
+                <dl class="horario">
+                    <div><dt>Almoço</dt><dd>12:00 – 15:00</dd></div>
+                    <div><dt>Jantar</dt><dd>19:00 – 23:00</dd></div>
+                    <div><dt>Encerrado</dt><dd>Segundas-feiras</dd></div>
+                </dl>
+            </div>
+
+           <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.3564717811973!2d-8.4638317!3d40.201132799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd22f8605d20313f%3A0xcb9ccd5aecef4019!2sR.%20Rep%C3%BAblica%20100%2C%203045-117%20Coimbra!5e0!3m2!1spt-PT!2spt!4v1794453915022!5m2!1spt-PT!2spt" title="Mapa com a localização do restaurante" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </section>
+        
+        
+    </main>
+
+    <!-- Rodapé (igual em todas as páginas) -->
+    <footer class="rodape">
+        <div class="contentor rodape__interior">
+            <div>
+                <p class="rodape__titulo">Sabores da Guiné</p>
+                <p>Cozinha guineense.</p>
+            </div>
+            <div>
+                <p class="rodape__titulo">Contatos</p>
+                <address>
+                    Rua República, n.º 100<br>
+                    3045-116 Coimbra<br>
+                    +351 930 633 000<br>
+                    frakitojr08@gmail.com
+                </address>
+            </div>
+            <div>
+                <p class="rodape__titulo">Redes sociais</p>
+                <p><a href="https://www.instagram.com/sabores.245?exln=MTloM2hldDN6dGhxZQ%3D%3D&utm_source=qr" target="_blank" rel="noopener">Instagram</a></p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
